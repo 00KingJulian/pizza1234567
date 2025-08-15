@@ -31,17 +31,34 @@
     }
     section {
       padding: 2rem;
+      max-width: 900px;
+      margin: auto;
     }
     .menu-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
     .menu-item {
-      border: 1px solid #ccc;
-      border-radius: 8px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
       padding: 1rem;
       background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .menu-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #f77f00;
+      margin-bottom: 0.5rem;
+    }
+    h2, h3 {
+      margin-bottom: 0.5rem;
     }
     footer {
       background-color: #333;
@@ -78,26 +95,39 @@
 
   <section id="menu">
     <h2>Our Menu</h2>
+    
+    <!-- Pizza Menu -->
+    <h3 style="color:#d62828;">Pizzas</h3>
     <div class="menu-grid">
       <div class="menu-item">
         <h3>Margherita</h3>
-        <p>Classic tomato sauce, mozzarella, fresh basil</p>
-        <strong>$3.50 / slice</strong>
+        <p class="price">$22</p>
+        <p>Classic Italian-style pizza topped with San Marzano tomato sauce, creamy fresh mozzarella, aromatic basil leaves, and a drizzle of extra virgin olive oil on a hand-tossed crust.</p>
       </div>
       <div class="menu-item">
         <h3>Pepperoni</h3>
-        <p>Spicy pepperoni, tomato sauce, mozzarella</p>
-        <strong>$4.00 / slice</strong>
+        <p class="price">$26</p>
+        <p>Hand-stretched dough layered with tangy tomato sauce, premium mozzarella, and generously topped with spicy, thin-sliced pepperoni for a bold, savory flavor in every bite.</p>
       </div>
       <div class="menu-item">
-        <h3>White Pie</h3>
-        <p>Ricotta, mozzarella, garlic, olive oil</p>
-        <strong>$4.25 / slice</strong>
+        <h3>Vegetable</h3>
+        <p class="price">$24</p>
+        <p>A colorful medley of roasted bell peppers, zucchini, mushrooms, onions, and spinach on a rich tomato base with mozzarella and fresh garden herbs.</p>
+      </div>
+    </div>
+
+    <!-- Drinks Menu -->
+    <h3 style="color:#d62828; margin-top:2rem;">Drinks</h3>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h3>Water</h3>
+        <p class="price">$2</p>
+        <p>Refreshing bottled spring water, served chilled.</p>
       </div>
       <div class="menu-item">
-        <h3>Truffle Mushroom</h3>
-        <p>Wild mushrooms, truffle oil, mozzarella</p>
-        <strong>$4.50 / slice</strong>
+        <h3>Assorted Sodas</h3>
+        <p class="price">$3</p>
+        <p>A selection of popular sodas — Coca-Cola, Diet Coke, Sprite, and more.</p>
       </div>
     </div>
   </section>
@@ -127,3 +157,4 @@
 
 </body>
 </html>
+
